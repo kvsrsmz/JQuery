@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery $proxy()</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Jquery Eğitimi</h2>
+    <p>Normal Paragraf</p>
+     <input type="text" value="Hello Jquery"><br><br>
+     <button type="button" id="Btn">Click Button</button>
+    <a href="#" id="link">Click Link</a>
+    
+
+    <!--$proxy():MEVCUT BİR FONKSİYONU ALIR VE BELİRLİ BİR BAĞLAMDA YENİSİNİ DÖNDÜRÜR-->
+    <script>
+       $(function(){
+        var objPerson={
+            name:"Kevser SEMİZ",
+            age:22,
+            test:function(){
+                $("p").text("İsim: "+this.name+ " Yaş: "+this.age)
+            }
+        };
+            $("#Btn").click($.proxy(objPerson,"test"));
+       });
+    </script>
+</body>
+
+</html>

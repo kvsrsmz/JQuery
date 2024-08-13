@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery currentTarget()</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p>Jquery ile eventlerin  tamamına hakim oluyorum</p>
+    <p>Merhabalar ben bu yerlerden biriyiim</p>
+    <a href="https://www.udemy.com/user/karaprens-2/">Fehmi Uyar UDEMY </a>
+
+   
+    <script>
+            $(function(){
+               $("h2,p").click(function(event){
+                alert(event.currentTarget === this);
+               });
+            });
+    </script>
+</body>
+</html>

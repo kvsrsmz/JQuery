@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <h2>JQery Eğitim Seti</h2>
+
+    <p>JQuery ile element kaldırma</p>
+    <p>query ile remove kullanımı</p>
+    <p>JQuery ile empty kullanımı</p>
+
+    <div id="result">Bu metne class atayacağım</div>
+    <p><button>addClass</button></p><br>
+    <p><button id="btn">removeClass</button></p>
+    <p><button id="btn2">ToggleClass</button></p>
+    
+
+     <script>
+        //removeClass(): SEÇİLEN ELEMENTLERE BİR VEYA DAHA FAZLA SINIFI KALDIRIR
+        //addClass(): SEÇİLEN ELEMENTLERE BİR VEYA DAHA FAZLA SINIF EKLER
+        //toggleClass(): SEÇİLEN ELEMENTLERDEN SINIF EKLELME/ÇIKARMA ARASINDA GEÇİŞ YAPAR        
+        //css(): STİL ATTRİBUTE'NÜ AYARLAR VE DÖNDÜRÜR
+        $(function(){
+            $("button").click(function(){
+                $("h2,p").addClass("red");
+                $("div").addClass("important red");
+            });
+            $("#btn").click(function(){
+                $("h2,p").removeClass("red");
+            });
+            $("#btn2").click(function(){
+                $("h2,p").toggleClass("red");
+            });
+           
+ 
+        });
+    
+     </script>
+</body>
+</html>

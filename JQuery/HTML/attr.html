@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <h2>JQery Eğitim Seti</h2>
+
+    <p>
+        <a href="https://www.udemy.com/user/karaprens-2/" target="_blank" title="udemy anasayfa">Udemy Kevser SEMİZ</a>
+    </p>
+     
+    <p id="result1">Jquery ile içeriklere müdahale</p>
+    <p id="result2">İçerikler değişecek</p>
+    <p>Input Alanı: <input type="text" id="result3" value="Tahsin KARGiN"></p>
+    <button id="btn">Show Attribute</button>
+    <button id="btn4">Change Attribute</button>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show Html</button>
+    <button id="btn3">Show Val</button>
+
+     <script>
+        $(function(){
+            $("#btn").click(function(){
+                alert($("a").attr("title"));
+            });
+            $("#btn4").click(function(){
+                alert($("a").attr("href","https:www.youtube.com/fehmiuyarnet"));
+            });
+            $("#btn1").click(function(){
+                $("#result1").html("Hello JQuery")
+            });
+            $("#btn2").click(function(){
+                $("#result2").html("<b>Hello</b><br>JQuery")
+            });
+            $("#btn3").click(function(){
+                $("#result3").val("Kevser SEMİZ")
+            });
+        });
+     </script>
+</body>
+</html>

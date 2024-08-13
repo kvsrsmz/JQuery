@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery hover()</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p>Jquery ile eventlerin  tamamına hakim oluyorum</p>
+    <div style="border:1px solid black; padding:15px;">
+       Username: <input type="text" name="username" id="username"><br><br>
+       Password: <input type="password" name="pass" id="pass">
+    </div>
+
+    <!--focus():BİR ELEMENTE ODAKLANILDIĞINDA
+    focusin():BİR ÖGE(VEYA İÇİNDEKİ HERHANGİ BİR ÖGE) ODAKLANILDIĞINDA TETİKLENİR
+    focusout():BİR ÖGE İÇİNDEKİ ODAĞI KAYBETTİĞİNDE TETİKLENİR-->
+    <script>
+        $(function(){
+            $("div").focusin(function(){
+               $(this).css("background-color","darkred");
+            });
+                $("div").focusout(function(){
+                    $(this).css("background-color","darkgoldenrod");
+                });
+        });
+    </script>
+</body>
+</html>

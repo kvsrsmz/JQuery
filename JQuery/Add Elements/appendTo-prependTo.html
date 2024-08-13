@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+</head>
+<body>
+    <h2>JQery Eğitim Seti</h2>
+
+    <p>JQuery diğerhtml/css komutları</p>
+    <p>JQuery unuttuğum komutlar</p>
+
+    <br><button>click</button>
+
+    
+
+
+     <script>
+        //appendTo(): SEÇİLEN ELEMENTİN SONUNA HTML ÖGELERİ EKLER
+        //prependTo(): SEÇİLEN ELEMENTİN BAŞINA HTML ELEMENTLERİNİ EKLER
+        
+        $(function(){
+            $("button").click(function(){
+                $("<span>SONA EKLENDİM</span>").appendTo("p");
+                $("<span>BAŞA EKLENDİM</span>").prependTo("p");
+            });
+           
+        });
+       
+
+     </script>
+</body>
+</html>

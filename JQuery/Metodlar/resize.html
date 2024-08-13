@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery resize()</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Jquery Eğitimi</h2>
+    <p>Pencerenin boyutunu <span>0</span> kere değiştirdin</p>
+    <p>En: <span id="width"></span></p>
+    <p>Boy: <span id="height"></span></p>
+     <input type="text" value="Hello Jquery"><br><br>
+     <button type="button" id="Btn">Click Button</button>
+    <a href="#" id="link">Click Link</a>
+    
+
+    <!--resize(): TARAYICI PENCERESİ BOYUT DEĞİŞTİRDİĞİNDE TETİKLENİR-->
+    <script>
+        var w,h;
+        w=$(window).width(); //ekranın genişliğini w değişkenine atadım
+        h=$(window).height();//ekranın yüksekliğini h değişkenine atadım
+        $("#width").text(w);//width id'li spanın içine w değişkenini yazdırdım
+        $("#height").text(h);//height id'li spanın içine h değişkenini yazdırdım
+        $(function(){
+            w=$(window).width(); 
+            h=$(window).height();
+            $("#width").text(w);
+            $("#height").text(h);
+        $(window).resize(function(){
+            w=$(window).width(); 
+            h=$(window).height();
+            $("#width").text(w);
+            $("#height").text(h);
+        });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+.box{
+    width: 100px;
+    height: 100px;
+    display: none;
+    background-color: rgb(30, 199, 109);
+    float: left;
+    margin-right: 20px;
+    color: white;
+    padding: 20px;
+}
+#divClick, #panel,#divClick2,#divClick3,#panel2{
+    padding:10px;
+    text-align:center;
+    background-color: darkolivegreen;
+    border:2px solid rgb(54, 65, 13);
+}
+#panel{
+    padding: 90px;
+    display: none;/*görünmez*/
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(92, 73, 128);
+    color: white;
+    padding: 10px;
+    position: absolute;/*hareketei özgürleşti*/
+}
+#panel2{
+    padding: 90px;
+    display: none;/*görünmez*/
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+</head>
+<body>
+    <h2>JQery Eğitim Seti</h2>
+
+    <p>JQuery diğer html/css komutları</p>
+    <p>Jquery unuttuğum komutlar</p><br>
+
+    <button id="btn1">click</button>
+     <script>
+        $(function(){
+            $("#btn1").click(function(){
+                $("p").clone().appendTo("body");
+            })
+               
+            
+        });
+    
+     </script>
+</body>
+</html>

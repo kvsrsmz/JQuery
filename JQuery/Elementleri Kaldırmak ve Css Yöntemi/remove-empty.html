@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <h2>JQery Eğitim Seti</h2>
+    <div id="result">
+        <p>JQuery ile element kaldırma</p>
+        <p id="demo">JQuery ile remove kullnımı</p>
+        <p class="color">JQuery ile empty kullanımı</p>
+        <div id="res">Bu metne bir class atayacağım</div>
+        <p><button>Remove</button></p>
+        <ol>
+            <li>Javascrip</li>
+            <li>JQuery</li>
+            <li>Angular JS</li>
+        </ol>
+    </div>
+    <p><button id="btnRemove">Removee</button><button id="btnEmpty">Empty</button></p>
+
+
+     <script>
+        //remove(): SEÇİLEN ELEMENTİ KALDIRIR
+        //empty(): SEÇİLEN ELEMENTİN İÇİNİ BOŞALTIR
+    
+        $(function(){
+            $("#btnRemove").click(function(){
+                $("#result").remove();
+            });
+            $("#btnEmpty").click(function(){
+                $("#result").empty();
+            });
+            $("button").click(function(){
+                $("p").remove(".color, #demo");
+            });
+ 
+        });
+    
+     </script>
+</body>
+</html>

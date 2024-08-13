@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+</head>
+<body>
+    <h2>JQery Eğitim Seti</h2>
+
+    <div class="result"></div>
+    <p><button>Click</button></p>
+    
+    
+
+     <script>
+        
+        $(function(){
+            $("button").click(function(){
+                var txt="";
+                txt+="div width: "+$("div").width()+"<br>";
+                txt+="div height: "+$("div").height()+"<br>";
+                txt+="div innerWidth: "+$("div").innerWidth()+"<br>";
+                txt+="div innerHeight: "+$("div").innerHeight()+"<br>";
+                txt+="div outerWidth: "+$("div").outerWidth()+"<br>";
+                txt+="div outerHeight: "+$("div").outerHeight()+"<br>";
+                txt+="div outerWidth(true): "+$("div").outerWidth(true)+"<br>";
+                txt+="div outerHeight(true): "+$("div").outerHeight(true)+"<br>";
+                $("div").html(txt);
+            });
+            
+        });
+    
+     </script>
+</body>
+</html>

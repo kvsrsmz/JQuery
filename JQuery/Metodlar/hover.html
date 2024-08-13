@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery hover()</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p>Jquery ile eventlerin  tamamına hakim oluyorum</p>
+    <p><input type="text" name="username" id="username"><span id="result"></span></p>
+
+    <!--hover():BU YÖNTEM HEM MOUSEENTER HEM MOUSELEAVE EVENTİNİ TETİKLER-->
+    <script>
+        $(function(){
+            $("p").hover(function(){
+                $(this).css("color","green");
+            },function(){
+                $(this).css("color","red")
+            });
+
+        });
+    </script>
+</body>
+</html>

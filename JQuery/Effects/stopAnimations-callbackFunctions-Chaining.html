@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+     <h2>JQery Eğitim Seti</h2>
+     <button type="button" id="stop">Start</button><br><br>
+     <div id="divClick">Click</div>
+     <div id="panel2">Hello</div><br><br>
+     <button type="button2" id="btn">click2</button>
+     <button type="button2" id="btnn">click3</button><br>
+     <p id="par">Hello Jquery Effect CallBack</p><br><br>
+     <button type="button" id="Chain">Chaining</button><br>
+     <p id="par2">Hello Chaininggg(ZİNCİRLEME İŞLEMLER)</p>
+
+    
+     <script>
+        $(function(){
+           $("#divClick").click(function(){
+                $("#panel2").slideDown(3000);
+           });
+           $("#stop").click(function(){
+                $("#panel2").stop();
+           });
+           $("#btn").click(function(){
+            $("#par").hide(1000);
+            alert("önce allert yazıldı sonra paragraf gizlendi!");
+           });
+           $("#btnn").click(function(){
+            $("#par").hide(1000,function(){
+                alert("önce paragraf gizlendi sonra allert yazıldı!")
+            });
+           });
+           $("#Chain").click(function(){
+                $("#par2").css("color","pink").slideUp(2000).slideDown(2000);
+           });
+
+        
+        });
+     </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Lesson-1</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h2 class="result">Jquery Eğitimi</h2>
+    <p>Tıkla bana Jquery gücünü gör</p>
+    <p>Bana da tıkla ve kolay javascript yazmanın hazını al</p>
+    <p>username: <input type="text" name="username" id="username"></p>
+    <div id="result">dfvdfvadva</div>
+    <button type="button" id="Btn">Click Me</button>
+    
+    <script>
+       $(function(){
+        $("#username").change(function(){
+            $("#result").css("color","red");
+        });
+        $("#username").select(function(){
+            $("#result").text("beni neden seçtin");
+        });
+       });
+            
+           
+
+          
+           
+     
+    </script>
+</body>
+
+</html>

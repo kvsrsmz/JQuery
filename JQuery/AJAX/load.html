@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Welcome to my JQuery Lesson</h2>
+    </div>
+    
+    <p id="result"></p>
+
+    <button>Click</button>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $("div").load("demo.txt", function(responseTxt,statusTxt,xhr){
+                    if(statusTxt="success")
+                    alert("İçerik  başarıyla yüklendi");
+                else if(statusTxt="error")
+                alert("Hata:" +xhr.statu + " : "+xhr.stausText);
+ 
+                });
+            });
+        });
+    </script>
+</body>
+</html>

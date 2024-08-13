@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery mousemove()</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p id="mousemove">Jquery ile eventlerin  tamamına hakim oluyorum</p>
+    <div id="result"></div>
+    <p style="border:1px solid black; padding
+    :15px">Merhabalar ben bu yerlerden biriyiim</p>
+
+    <!--mousemove():FARE ELEMENTİN ÜZERİNDE HAREKET ETTİĞİNDE TETİKLENİR-->
+    <script>
+        var x=0;
+            $(function(){
+                $("#mousemove").mousemove(function(){
+                    $("#result").text(x+=1)
+                });
+            });
+    </script>
+    <!--mouseout():FARE ELEMENTİN VEYA ELEMENTİN ALT ÖGELERİNDEN ÇIKTIĞINDA TETİKLENİR-->
+    <!--mouseover():FARE ELEMENTİNİN VEYA ELEMENTİN ALT ÖGESİNİN ALANINA GİRDİĞİNDE TETİKLENİR-->
+    <script>
+        var x=0;
+            $(function(){
+                $("p").mouseover(function(){
+                    $("p").css("background-color","red");
+                });
+                $("p").mouseout(function(){
+                    $("p").css("background-color","yellow")
+                });
+            });
+    </script>
+</body>
+</html>

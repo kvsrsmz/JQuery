@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+</head>
+<body>
+    <h2>Welcome to My Jquery Lesson</h2>
+    <p>Jquery ile çeşitli metodlar</p>
+    <ul>
+        <li>Angular JS</li>
+        <li>React JS</li>
+        <li>Vue JS</li>
+        <li>Node JS</li>
+    </ul>
+    <button id="btn1">Insert Data</button>
+    <button id="btn2">Get Data</button>
+    <div id="result"></div>
+
+
+     <script>
+        $(function(){
+           $("#btn1").click(function(){
+              $("#result").data("veri","Hello JQuery");
+              alert($("#result").data("veri"));
+           });
+              $("#btn2").click(function(){
+                 $("#result").removeData("veri");
+                 alert($("#result").data("veri"));
+              });
+        });
+       
+
+     </script>
+</body>
+</html>

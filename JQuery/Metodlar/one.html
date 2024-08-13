@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery one()</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Jquery Eğitimi</h2>
+    <p>Normal Paragraf</p>
+     <input type="text" value="Hello Jquery"><br><br>
+     <button type="button" id="Btn">Click Button</button>
+    <a href="#" id="link">Click Link</a>
+    
+
+    <!--one(): SEÇİLEN ÖGELERE BİR VEYA DAHA FAZLA OLAY İŞLEYLİCİSİ EKLER. BU İŞLEYİCİ, HER ÖGE İÇİN YALNIZCA BİR KEZ TETİKLENİR-->
+    <script>
+       $(function(){
+        $("p").one("click",function(){
+            $(this).animate({fontSize:"+=6px"});
+        });
+       });
+    </script>
+</body>
+
+</html>

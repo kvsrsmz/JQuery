@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+     <h2>JQery Eğitim Seti</h2>
+     
+     <div id="divClick">slideDown</div>
+     <div id="divClick2">slideUp</div>
+     <div id="divClick3">slideToggle</div>
+    
+     <div id="panel">Hello Jquery Slide Effect</div>
+     <script>
+        $(function(){
+            $("#divClick").click(function(){
+                $("#panel").slideDown("slow");//kayarak açıldı
+            });
+            $("#divClick2").click(function(){
+                $("#panel").slideUp("slow");//kayarak açıldı
+            });
+            $("#divClick3").click(function(){
+                $("#panel").slideToggle("slow");//kayarak açıldı
+            });
+
+          
+        });
+     </script>
+</body>
+</html>

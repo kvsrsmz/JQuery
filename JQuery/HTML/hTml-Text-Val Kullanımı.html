@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+     <h2>JQery Eğitim Seti</h2>
+     <p id="result">Bu paragraf içindeki <b>bold</b> bir metin</p>
+     <button id="btn1">Show Text</button>
+     <button id="btn2">Show HTML</button> <br> <br>
+     <form>
+        <input type="text" value="jquery eğitim seti"><br>
+        <textarea>https://www.udemy.com/user/karaprens-2/</textarea><br>
+        <input type="checkbox" name="confirm" value="1" checked> Onayla <br>
+        <select>
+            <option>Javascript</option>
+            <option selected>Jquery</option>
+            <option>angular JS</option>
+        </select><br>
+        <select multiple>
+            <option selected>Node Js</option>
+            <option>React JS</option>
+            <option>Vue JS</option>
+        </select><br>
+        <input type="radio" name="gender" value="1" checked>Kadın 
+        <input type="radio" name="gender" value="0">Erkek
+     </form><br>
+     <button id="btn">Show </button>
+     <p id="res"></p>
+
+     <script>
+        $(function(){
+            //text kulanımı
+            $("#btn1").click(function(){
+                alert("Metin text() ile alındı: "+$("#result").text());
+            });
+            //html kullanımı
+            $("#btn2").click(function(){
+                alert("Metin html() ile alındı: "+$("#result").html());
+});
+    var getValue="";
+$("#btn").click(function(){
+getValue +="Metin Kutusu:"+$("input:text").val()+"<br>";
+getValue +="Metin Alanı:"+$("textarea").val()+"<br>";
+getValue +="Onay Kutusu:"+$("input:checkbox:checked").val()+"<br>";
+getValue +="Seçim"+$("select").val()+"<br>";
+getValue +="Çoklu seçim:"+$("select[multiple]").val()+"<br>";
+getValue +="Radio Düğmesi:"+$("input:radio:checked").val()+"<br>";
+$("#res").html(getValue);
+                     });
+
+        
+        });
+     </script>
+</body>
+</html>

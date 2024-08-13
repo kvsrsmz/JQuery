@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery triggle()</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h2>JQery Eğitimi</h2>
+
+   <input type="text" value="Hello JQery"><span id="result"></span><br><br>
+   <button type="button" id="Btn">Click Button</button>
+   <a href="#" id="link">Click Link</a>
+
+    <!--triggle():SEÇİLEN ELEMENTİN EVENTLERİNİ KULLAN
+    triggleHandler():SEÇİLEN ÖGE İÇİN BELİRTİLEN EVENTİ TETİKLER seçilmiş mavi arka planı göstermiyor-->
+    <script>
+       $(function(){
+            $("#link").select(function(){
+                alert("Linke tıkladın");
+            });
+            $("#Btn").click(function(){
+                $("#link").trigger("click");
+            });
+       });
+    </script>
+</body>
+
+</html>

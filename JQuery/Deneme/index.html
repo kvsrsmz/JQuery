@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <style>
+        ul{
+            background-color: darkolivegreen;
+            float: left;
+            margin-right: 15px;
+            width:300px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to My Jquery Lesson</h2>
+    <ul>
+        <li>List 1 row 1</li>
+        <li>List 1 row 2</li>
+        <li>List 1 row 3</li>
+        <li>List 1 row 4</li>
+        <li>List 1 row 5</li>
+    </ul>
+    <ul>
+        <li>List 2 row 1</li>
+        <li>List 2 row 2</li>
+    </ul>
+    <ul>
+        <li>List 3 row 1</li>
+        <li>List 3 row 2</li>
+        <li>List 3 row 3</li>
+        <li>List 3 row 4</li>
+    </ul>
+
+    <div style="clear: left;"></div>
+    <button id="run">Click</button>
+
+
+     <script>
+        $(function(){
+           var maxValue = 0;
+           $("#run").click(function(){
+              $("ul").each(function(){
+                maxValue = Math.max($(this).height(),maxValue);
+              });
+              $("ul").height(maxValue);
+           });
+        });
+       
+
+     </script>
+</body>
+</html>

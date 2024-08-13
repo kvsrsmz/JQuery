@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js" integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <h2>JQery Eğitim Seti</h2>
+
+    <p>JQuery ile element ekleme</p>
+    <p>JQuery ile append kullanımı</p>
+
+    <ol>
+        <li>Javascript</li>
+        <li>JQuery</li>
+        <li>Angular JS</li>
+    </ol>
+    <button id="btn1">Append text</button>
+    <button id="btn2">Append list</button>
+    <button id="btn3">Prepend text</button>
+    <button id="btn4">Prepend list</button>
+    <button onclick="appendText()">Append Function</button>
+    <button id="btn5">Insert before</button>
+    <button id="btn6">Insert after</button>
+    <button onclick="afterText()">Insert After Function</button>
+
+
+     <script>
+        //append(): SEÇİLEN ELEMENTİN SONUNA İÇERİK EKLER
+        //prepend(): SEÇİLEN ELEMENTİN BAŞINA İÇERİK EKLER
+        //before(): SEÇİLEN ELEMENTLERDE ÖNCE İÇERİK EKLER
+        //after(): SEÇİLEN ELEMENTLERDEN SONRA İÇERİK EKLER
+        
+        $(function(){
+            $("#btn1").click(function(){
+                $("p").append("<b>paragrafın sonuna yeni metin</b>");
+            });
+            $("#btn2").click(function(){
+                $("ol").append("<li> listenin sonuna Vue JS</li>");
+            });
+            $("#btn3").click(function(){
+                $("p").prepend("<b>paragrafın başına yeni metin</b>");
+            });
+            $("#btn3").click(function(){
+                $("ol").prepend("<li>listenin başına Vue JS</li>");
+            });
+            $("#btn5").click(function(){
+                $("ol").before("<b>Seçtiğin elementin öncesine ekledim</b>");
+            });
+            $("#btn6").click(function(){
+                $("ol").after("<b>Seçtiğin elementin sonrasına ekledim</b>");
+            });
+        });
+       /* function appendText(){
+            var txt1,txt2,txt3;
+            txt1="<p>Yeni metin";//HTML ile metin oluşturma
+            txt2=$("<p><p/>").text("Yeni Metin");//JQuery ile metin oluşturma
+            txt3=document.createElement("p");//DOM ile metin oluşturma(Core Javascript aracılığıyla) 
+            txt3.innerHTML="Yeni Metin";
+            $("body").append(txt1,txt2,txt3);       
+        }*/
+
+     </script>
+</body>
+</html>
